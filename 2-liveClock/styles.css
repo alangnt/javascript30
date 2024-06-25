@@ -1,0 +1,89 @@
+*,
+*:before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: lightyellow;
+}
+
+.clock-face {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: black;
+
+}
+
+.hand {
+    transform-origin: 0%;
+    transform: rotate(270deg);
+    transition: transform 0.05s;
+}
+
+.hour-hand {
+    width: 25%;
+    height: 8px;
+    transition-timing-function: ease-in-out;
+}
+
+.min-hand {
+    width: 40%;
+    height: 8px;
+    transition-timing-function: ease-in-out;
+}
+
+.sec-hand {
+    width: 45%;
+    height: 5px;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.round-center {
+    border-radius: 50%;
+    width: 5%;
+    height: 5%;
+    top: 48.5%;
+    left: 47%;
+}
+
+/*Now let's style the rest of the page*/
+body {
+    background-image: linear-gradient(-20deg, #c76b98, #fcc3a3);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
